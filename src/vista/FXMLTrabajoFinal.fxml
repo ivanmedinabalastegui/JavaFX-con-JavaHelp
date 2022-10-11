@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="0.0" prefWidth="0.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FXMLTrabajoFinalController">
+   <children>
+  <AnchorPane layoutX="71.0" minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="1167.0">
+         <children>
+            <Pane fx:id="pF_Inicio" onMouseClicked="#cambiarPestanas" prefHeight="750.0" prefWidth="1167.0">
+               <children>
+                  <Pane layoutX="18.0" layoutY="59.0" prefHeight="623.0" prefWidth="1003.0" style="-fx-background-color: rgb(210, 210, 210);">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="48.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icono.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Text layoutX="65.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mejora de las interfaces (Proyecto 3T de Programación de 1ºDAM, versión JavaFX)">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipo de trabajo:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Víctor Algaba Bueno">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iván García Jiménez">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="65.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iván Medina Balastegui">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="68.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="José Laureano Molina Miguel">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="pF_DAT" onMouseClicked="#cambiarPestanas" prefHeight="723.0" prefWidth="1158.0" visible="false">
+               <children>
+                  <Pane fx:id="pTregistrada" prefHeight="51.0" prefWidth="484.0" style="-fx-background-color: cyan;" visible="false">
+                     <children>
+                        <Label fx:id="lTregistrada" layoutX="13.0" layoutY="13.0" text="Información del fichero ahora registrada en la tabla Tutores">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="bXML" layoutX="603.0" layoutY="155.0" mnemonicParsing="false" onAction="#agregarXML" prefHeight="192.0" prefWidth="410.0" />
+                  <Label fx:id="lbTutor" layoutX="618.0" layoutY="380.0" prefHeight="62.0" prefWidth="354.0" style="-fx-background-color: #3383FF;" text="Información del fichero ahora registrada en la tabla Tutores">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Button fx:id="bDAT" layoutX="111.0" layoutY="156.0" mnemonicParsing="false" onAction="#agregarDAT" prefHeight="191.0" prefWidth="410.0" />
+                  <Label fx:id="lbAlumno" layoutX="130.0" layoutY="376.0" prefHeight="62.0" prefWidth="354.0" style="-fx-background-color: #55FF33;" text="Información del fichero ahora registrada en la tabla Alumnos">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pF_GestE" layoutY="4.0" onMouseClicked="#cambiarPestanas" prefHeight="750.0" prefWidth="1157.0" visible="false">
+               <children>
+                  <Pane fx:id="pPersonas" layoutY="219.0" prefHeight="144.0" prefWidth="654.0">
+                     <children>
+                        <TextField fx:id="tfMail" layoutX="197.0" layoutY="41.0" prefHeight="25.0" prefWidth="298.0" />
+                        <Label fx:id="lMail" layoutX="153.0" layoutY="45.0" text="Mail:" />
+                        <Label fx:id="lLocalidad" layoutX="217.0" layoutY="6.0" text="Localidad:" />
+                        <TextField fx:id="tfCP" layoutX="135.0" layoutY="6.0" prefHeight="25.0" prefWidth="62.0" />
+                        <Label fx:id="lCP" layoutX="100.0" layoutY="6.0" text="C.P.:" />
+                        <ComboBox fx:id="cbJornada" layoutX="206.0" layoutY="95.0" prefHeight="25.0" prefWidth="128.0" />
+                        <ComboBox fx:id="cbModalidad" layoutX="431.0" layoutY="98.0" prefWidth="150.0" />
+                        <Label fx:id="lJornada" layoutX="143.0" layoutY="99.0" text="Jornada:" />
+                        <TextField fx:id="tfLocalidad" layoutX="276.0" layoutY="2.0" prefHeight="25.0" prefWidth="219.0" />
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pBaseDatos" layoutX="112.0" layoutY="458.0" prefHeight="200.0" prefWidth="1003.0">
+                     <children>
+                        <TableView fx:id="tEmpresa" layoutX="4.0" layoutY="5.0" onMouseClicked="#seleccionar" prefHeight="192.0" prefWidth="994.0" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="lReflejoBD" layoutX="121.0" layoutY="440.0" text="Reflejo de la Base de Datos" />
+                  <Button fx:id="bInsertar" layoutX="780.0" layoutY="385.0" mnemonicParsing="false" onAction="#agregarEmpresa" prefHeight="34.0" prefWidth="88.0" text="Insertar" />
+                  <Button fx:id="bModificar" layoutX="872.0" layoutY="385.0" mnemonicParsing="false" onAction="#modificarEmpresa" prefHeight="34.0" prefWidth="92.0" text="Modificar" />
+                  <Button fx:id="bEliminar" layoutX="970.0" layoutY="385.0" mnemonicParsing="false" onAction="#borrarEmpresa" prefHeight="34.0" prefWidth="93.0" text="Eliminar" />
+                  <TextField fx:id="tfDNITL" layoutX="1002.0" layoutY="189.0" prefHeight="25.0" prefWidth="137.0" />
+                  <TextField fx:id="tfNombreTL" layoutX="756.0" layoutY="228.0" prefHeight="26.0" prefWidth="137.0" />
+                  <Label fx:id="lNombreTL" layoutX="682.0" layoutY="232.0" text="Nombre TL:" />
+                  <TextField fx:id="tfTLF" layoutX="730.0" layoutY="270.0" prefHeight="26.0" prefWidth="190.0" />
+                  <Label fx:id="lTLF" layoutX="682.0" layoutY="274.0" text="Tlf. TL:" />
+                  <Label fx:id="lModalidad" layoutX="366.0" layoutY="320.0" text="Modalidad:" />
+                  <TextField fx:id="tfApellidosTL" layoutX="986.0" layoutY="232.0" prefHeight="25.0" prefWidth="155.0" />
+                  <Label fx:id="lApellidosTL" layoutX="914.0" layoutY="236.0" text="Apellidos TL:" />
+                  <TextField fx:id="tfNombreRL" layoutX="1004.0" layoutY="151.0" prefHeight="25.0" prefWidth="133.0" />
+                  <Label fx:id="lCodigoEmpresa" layoutX="102.0" layoutY="155.0" text="Código Empresa:" />
+                  <TextField fx:id="tfCodigoEmpresa" alignment="CENTER" editable="false" layoutX="205.0" layoutY="151.0" prefHeight="25.0" prefWidth="42.0" text="5" />
+                  <TextField fx:id="tfCIF" layoutX="300.0" layoutY="150.0" prefHeight="25.0" prefWidth="164.0" />
+                  <Label fx:id="lCIF" layoutX="271.0" layoutY="154.0" text="CIF:" />
+                  <Label fx:id="lDireccion" layoutX="356.0" layoutY="192.0" text="Dirección:" />
+                  <Label fx:id="lEmpresa" layoutX="265.0" layoutY="82.0" text="Empresa">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+                  <TextField fx:id="tfDireccion" layoutX="415.0" layoutY="189.0" prefHeight="25.0" prefWidth="192.0" />
+                  <TextField fx:id="tfNombre" layoutX="159.0" layoutY="189.0" prefHeight="25.0" prefWidth="175.0" />
+                  <Label fx:id="lNombre" layoutX="101.0" layoutY="193.0" text="Nombre:" />
+                  <Label fx:id="lApellidosRL" layoutX="679.0" layoutY="193.0" text="Apellidos RL:" />
+                  <TextField fx:id="tfApellidosRL" layoutX="762.0" layoutY="189.0" prefHeight="25.0" prefWidth="125.0" />
+                  <TextField fx:id="tfDNIRL" layoutX="786.0" layoutY="151.0" prefHeight="25.0" prefWidth="123.0" />
+                  <Label fx:id="lDNIRL" layoutX="682.0" layoutY="155.0" text="DNI Rep. Legal:" />
+                  <Label fx:id="lNombreRL" layoutX="933.0" layoutY="155.0" text="Nombre RL:" />
+                  <Label fx:id="lDNITL" layoutX="909.0" layoutY="192.0" text="DNI Tut. Laboral:" />
+                  <Label fx:id="lPersonas" layoutX="867.0" layoutY="82.0" prefHeight="35.0" prefWidth="107.0" text="Personas">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font></Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pF_Asig" layoutX="96.0" layoutY="4.0" onMouseClicked="#cambiarPestanas" prefHeight="750.0" prefWidth="1066.0" visible="false">
+               <children>
+                  <Button fx:id="bConfirmar" layoutX="450.0" layoutY="292.0" mnemonicParsing="false" onAction="#bConfirmar" prefHeight="34.0" prefWidth="118.0" text="Confirmar" />
+                  <Label fx:id="lEleccionA" layoutX="351.0" layoutY="138.0" text="Elección de Alumno:" />
+                  <Label fx:id="lEleccionE" layoutX="364.0" layoutY="188.0" text="Elección de Empresa:" />
+                  <Label fx:id="lEleccionT" layoutX="387.0" layoutY="242.0" text="Elección de Tutor:" />
+                  <Pane fx:id="pAsignacion" layoutX="-54.0" layoutY="549.0" prefHeight="107.0" prefWidth="1093.0" style="-fx-background-color: grey;" visible="false" />
+                  <ComboBox fx:id="cbEleccionA" layoutX="491.0" layoutY="133.0" prefHeight="25.0" prefWidth="206.0" />
+                  <ComboBox fx:id="cbEleccionE" layoutX="504.0" layoutY="183.0" prefHeight="25.0" prefWidth="206.0" />
+                  <ComboBox fx:id="cbEleccionT" layoutX="504.0" layoutY="237.0" prefHeight="25.0" prefWidth="175.0" />
+                  <Label fx:id="lbConfirmar" layoutX="191.0" layoutY="485.0" prefHeight="86.0" prefWidth="641.0" style="-fx-background-color: #A2B0A3;" text="El alumno X queda asignado a la empresa X supervisado por el tutor docente X y por el tutor laboral X">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pF_Almacenamiento" layoutX="-1.0" layoutY="60.0" onMouseClicked="#cambiarPestanas" prefHeight="742.0" prefWidth="1158.0" visible="false">
+               <children>
+                  <TableView fx:id="tEmpresa2" layoutX="14.0" layoutY="14.0" prefHeight="550.0" prefWidth="1131.0" />
+               </children>
+            </Pane>
+            <Label layoutX="404.0" layoutY="10.0" text="GESTIÓN DE DATOS DE EMPRESAS">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sb_Iconos" prefHeight="750.0" prefWidth="76.0">
+         <children>
+            <Button fx:id="bd_Inicio" layoutY="8.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="86.0" prefWidth="70.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="HOME" size="28" />
+               </graphic></Button>
+            <Button fx:id="bd_Empresa" layoutY="123.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="86.0" prefWidth="70.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" size="28" />
+               </graphic></Button>
+            <Button fx:id="bd_DAT" layoutY="210.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="86.0" prefWidth="70.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BUILDING" size="28" />
+               </graphic></Button>
+            <Button fx:id="bd_Asignacion" layoutY="297.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="86.0" prefWidth="70.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PENCIL" size="28" />
+               </graphic></Button>
+            <Button fx:id="bd_Almacenamiento" layoutY="383.0" mnemonicParsing="false" onAction="#cambiarPestanas" prefHeight="86.0" prefWidth="70.0">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SERVER" size="28" />
+               </graphic></Button>
+            <Line endX="10.700004577636719" endY="234.4000244140625" layoutX="62.0" layoutY="516.0" startX="9.000007629394531" startY="-516.0" stroke="#6b6bff" strokeWidth="3.0" />
+            <Button fx:id="bAyuda" graphicTextGap="12.0" layoutY="646.0" mnemonicParsing="false" onAction="#ventanaAyuda" prefHeight="93.0" prefWidth="70.0">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView glyphName="QUESTION" size="28" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Line endX="-1.0000152587890625" endY="-475.32135009765625" layoutX="72.0" layoutY="526.0" startX="1164.0" startY="-475.32135009765625" stroke="#6b6bff" strokeWidth="3.0" />
+   </children>
+</AnchorPane>
